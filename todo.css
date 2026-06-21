@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+    padding: 20px;
+}
+
+.app {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #cbd5e1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 15px;
+}
+
+.input-row input::placeholder {
+    color: #cbd5e1;
+}
+
+.input-row input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.4);
+}
+
+.btn1,
+.btn2 {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn1 {
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+    color: white;
+}
+
+.btn1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+}
+
+.btn2 {
+    background: linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+    color: white;
+}
+
+.btn2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(239,68,68,0.4);
+}
+
+#list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.08);
+    padding: 14px;
+    border-radius: 14px;
+    margin: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.task-text {
+    flex: 1;
+    color: white;
+    font-size: 15px;
+}
+
+.task-item.done {
+    background: rgba(34,197,94,0.15);
+}
+
+.task-item.done .task-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.btn3 {
+    border: none;
+    background: transparent;
+    color: #fbbf24;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn3:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+#count {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.clear-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;   
+        padding: 12px;
+    }
+
+    .app {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    /* Stack input and buttons vertically */
+    .input-row {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    /* Full width buttons on mobile */
+    .btn1,
+    .btn2 {
+        width: 100%;
+        padding: 13px;
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    /* Tighter task items */
+    .task-item {
+        padding: 12px 10px;
+        margin: 8px 0;
+        border-radius: 10px;
+        gap: 8px;
+    }
+
+    .task-text {
+        font-size: 14px;
+    }
+
+    .btn3 {
+        font-size: 16px;
+        padding: 4px;    /* larger tap target */
+    }
+
+    #count {
+        font-size: 13px;
+    }
+    /* ... your existing rules ... */
+
+    .filter-row {
+        display: flex;
+        flex-direction: row;   /* keep them horizontal */
+        gap: 6px;
+    }
+
+    .filter-row button {
+        flex: 1;               
+        padding: 8px 0;        
+        font-size: 13px;
+        text-align: center;
+    }
+     .btn1 {
+        width: 100%;
+        display: block;
+        margin: 0 auto;   /
+    }
+}  }
+}

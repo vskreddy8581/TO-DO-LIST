@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+<!-- Main Application Container -->
+<div class="app">
+
+    <!-- Header Section -->
+    <h1>My Tasks</h1>
+    <p>A fully working to-do list — built with plain HTML, CSS & JS</p>
+
+    <!-- Task Input Section -->
+    <div class="input-row">
+        <input type="text" id="taskInput" placeholder="Add a new Task...">
+        <button class="btn1" onclick="addTask()">Add</button>
+    </div>
+
+    <!-- Filter Tasks Section -->
+    <div class="filter-row">
+        <button class="btn1" onclick="setFilter('all')">All</button>
+        <button class="btn1" onclick="setFilter('active')">Active</button>
+        <button class="btn1" onclick="setFilter('done')">Done</button>
+    </div>
+
+    <!-- Task List Section -->
+    <ul id="list"></ul>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <span id="count"></span>
+
+        <!-- Clear All Tasks -->
+        <div class="clear-btn">
+            <button class="btn2" onclick="clearAll()">Clear All</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="todo.js"></script>
+
+</body>
+</html>
